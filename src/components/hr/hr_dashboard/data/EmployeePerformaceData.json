@@ -1,0 +1,20 @@
+[
+    {
+        "pic":"/src/assets/hr/employee/profile/profile.jpg",
+        "Name":"Machel",
+        "Destination":"UI/UX Desinger",
+        "Performance":"Good"
+    },
+    {
+        "pic":"/src/assets/hr/employee/profile/profile.jpg",
+        "Name":"Nichols",
+        "Destination":"UI/UX Desinger",
+        "Performance":"Average"
+    },
+    {
+        "pic":"/src/assets/hr/employee/profile/profile.jpg",
+        "Name":"Rahul",
+        "Destination":"UI/UX Desinger",
+        "Performance":"Bad"
+    }    
+]

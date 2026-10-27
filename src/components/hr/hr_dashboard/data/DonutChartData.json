@@ -1,0 +1,12 @@
+{
+  "data1": {
+    "labels": ["Design", "Dev", "SEO"],
+    "datasets": [
+      {
+        "data": [300, 80, 120],
+        "backgroundColor": ["#FFBABA", "#FAF4C4", "#FFD3AA"],
+        "cutout": "75%"
+      }
+    ]
+  }
+}

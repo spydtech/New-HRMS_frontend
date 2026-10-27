@@ -1,0 +1,32 @@
+{
+    "data": {
+      "labels": ["Q1", "Q2", "Q3", "Q4", "Q5", "Q6"],
+      "datasets": [
+        {
+          "label": "Developer",
+          "backgroundColor": "#FFFFFF",
+          "stack":"Stack 0",
+          "data": [100, 120, 90, 140, 110, 160],
+          "borderRadius":15,
+          "barThickness":17
+        },
+        {
+          "label": "Marketing",
+          "backgroundColor": "rgba(245, 245, 245, 0.6)",
+          "stack":"Stack 0",
+          "data": [80, 110, 130, 100, 150, 120],
+          "borderRadius":15,
+          "barThickness":17
+        },
+        {
+          "label": "Sales",
+          "backgroundColor": "rgba(255, 255, 255, 0.3)",
+          "stack":"Stack 0",
+          "data": [70, 100, 80, 120, 90, 110],
+          "borderRadius":15,
+          "barThickness":17
+        }
+      ]
+    }
+  }
+  

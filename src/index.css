@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.scrollbar-thin {
+  /* scrollbar-width: thin; */
+  /* scrollbar-color: #ef5f2b #ef5f2b; */
+  /* thumb and track color */
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  /* width: 8px; */
+  height: 8px;
+  /* Set the height of the scrollbar */
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: transparent; /* thumb color */
+  /* Make the thumb circular */
+  width: 8px; /* Ensure the width matches the height for a circle */
+  height: 8px;
+  min-height: 8px; /* Ensure the thumb doesn't stretch */
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background-color: transparent;
+  /* track color */
+}

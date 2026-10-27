@@ -1,0 +1,19 @@
+{
+    "data3": {
+      "labels":["Male","Female"],
+      "datasets": [
+        {
+          "label": "Male",
+          "data": [70, null],
+          "backgroundColor": ["#FFFFFF", "#E65F2B"],
+          "cutout": "80%"
+        },
+        { 
+          "label": "Female",
+          "data": [45],
+          "backgroundColor": ["#E65F2B"],
+          "cutout": "75%"
+        }
+      ]
+    }
+}  

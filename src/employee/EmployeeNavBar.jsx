@@ -341,12 +341,12 @@
 
 
 
-
 /* eslint-disable react/prop-types */
 import { useState, useEffect, useMemo } from "react";
 import { ImProfile } from "react-icons/im";
 import { FaBars, FaSignOutAlt, FaClipboardList } from "react-icons/fa";
 import { FaCalendarAlt, FaCalendarCheck } from "react-icons/fa";
+import { IoChatbubblesOutline } from "react-icons/io5"; // 👈 Added Chat Icon
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { logoutUser } from "../store/slices/authSlice";
@@ -469,6 +469,7 @@ function EmployeeNavBar({ onIconClick, options }) {
           </div>
         </div>
 
+        {/* Mobile Menu */}
         <div className="flex justify-start md:hidden z-50 mr-2">
           <FaBars
             className="text-[#2A546D] text-3xl hover:cursor-pointer"
@@ -489,6 +490,19 @@ function EmployeeNavBar({ onIconClick, options }) {
                 <FaClipboardList className="hover:cursor-pointer" style={iconStyle("Attendance")} />
                 <p className="pl-2 text-[#2A546D]">Attendance</p>
               </div>
+
+              {/* 👈 Mobile Chat Icon */}
+              <div
+                onClick={() => {
+                  onIconClick("Chat");
+                  setDropdownOpen(false);
+                }}
+                className="border-b hover:bg-gray-200 flex border-[#2A546D] py-1 px-2"
+              >
+                <IoChatbubblesOutline className="hover:cursor-pointer" style={iconStyle("Chat")} />
+                <p className="pl-2 text-[#2A546D]">Chat</p>
+              </div>
+
               <div
                 onClick={() => {
                   onIconClick("Profile");
@@ -533,6 +547,7 @@ function EmployeeNavBar({ onIconClick, options }) {
           )}
         </div>
 
+        {/* Desktop Icons */}
         <div
           id="icons"
           className="hidden md:flex md:mt-2 justify-around items-center w-auto space-x-4 md:space-x-5 mr-10"
@@ -551,6 +566,23 @@ function EmployeeNavBar({ onIconClick, options }) {
               </div>
             )}
           </div>
+
+          {/* 👈 Desktop Chat Icon */}
+          <div className="relative">
+            <IoChatbubblesOutline
+              className="hover:cursor-pointer"
+              style={iconStyle("chat")}
+              onMouseEnter={() => handleMouseEnter("chat", "Chat")}
+              onMouseLeave={handleMouseLeave}
+              onClick={() => onIconClick("Chat")}
+            />
+            {hoveredIcon === "chat" && (
+              <div className="absolute text-nowrap bottom-[-2.0rem] left-1/2 transform -translate-x-1/2 bg-[#2A546D] text-white text-xs p-1 rounded">
+                {tooltip}
+              </div>
+            )}
+          </div>
+
           <div className="relative">
             <ImProfile
               className="hover:cursor-pointer"

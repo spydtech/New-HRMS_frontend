@@ -214,6 +214,13 @@ export const payrollAPI = {
   listPayslips: (params) => api.get("/payroll/payslips", { params }),
   getDashboard: () => api.get("/payroll/dashboard"),
 
+   // Salary Structure
+  getSalaryStructure: (userId) =>
+    api.get(
+      "/payroll/salary-structure",
+      userId ? { params: { user_id: userId } } : {}
+    ),
+
   listForms: () => api.get("/payroll/forms"),
   createForm: (data) => api.post("/payroll/forms", data),
 
@@ -230,6 +237,11 @@ export const eventsAPI = {
   create: (data) => api.post("/events", data),
   update: (id, data) => api.put(`/events/${id}`, data),
   remove: (id) => api.delete(`/events/${id}`),
+};
+export const bankAccountAPI = {
+  get: () => api.get("/bank-account"),
+  update: (data) => api.put("/bank-account", data),
+  listAll: () => api.get("/bank-account/all"),
 };
 
 // Only export things NOT already exported above.

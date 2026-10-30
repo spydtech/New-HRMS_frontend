@@ -2,7 +2,7 @@ import axios from "axios";
 
 //const API_URL = "http://localhost:8000/api/v1";
 //const API_URL = "https://www.api.hrms.spydtech.com";
-const API_URL = "https://api.hrms.spydtech.com/api/v1";
+const API_URL = "https://www.api.hrms.spydtech.com/api/v1";
 
 // Do NOT set a default Content-Type. Axios picks the right one automatically:
 // - JSON object → application/json

@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8000/api/v1";
+//const API_URL = "http://localhost:8000/api/v1";
+const API_URL = "https://www.api.hrms.spydtech.com";
 
 // Do NOT set a default Content-Type. Axios picks the right one automatically:
 // - JSON object → application/json
@@ -19,7 +20,7 @@ api.interceptors.request.use(
 
 api.interceptors.response.use(
   (response) => response,
-  (error) => {ch
+  (error) => {
     if (error.response?.status === 401) {
       localStorage.removeItem("token");
       localStorage.removeItem("user");
